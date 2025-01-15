@@ -35,14 +35,14 @@ header .navbar a {
   font-size: 1.5rem;
 }
 
-/* Hero Section with Video Background */
 .hero {
   position: relative;
   text-align: center;
   background: #000; /* Fallback color for when the video isn't loaded */
   color: #fff;
-  padding: 50px 20px; /* Reduced padding for smaller hero height */
+  padding: 100px 20px;
   overflow: hidden;
+  height: 100vh; /* Ensure the section fills the viewport */
 }
 
 .hero video {
@@ -56,8 +56,8 @@ header .navbar a {
 }
 
 .hero h1 {
-  font-size: 2.5rem; /* Adjusted font size for better scaling */
-  margin-bottom: 15px;
+  font-size: 3rem;
+  margin-bottom: 20px;
   z-index: 1; /* Keeps the text above the video */
 }
 
@@ -67,32 +67,18 @@ header .navbar a {
 
 .hero p {
   font-size: 1.25rem;
-  margin-bottom: 20px;
   z-index: 1; /* Keeps the paragraph above the video */
 }
 
-/* Updated button styling to be in front of the video */
 .cta, .explore-btn {
-  position: relative; /* Make sure buttons are positioned relative to the hero section */
   margin-top: 20px;
-  padding: 12px 25px; /* Increased padding for better button visibility */
+  padding: 10px 20px;
   background-color: #ff5722;
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 1.1rem; /* Slightly larger button text */
-  z-index: 1; /* Keeps the buttons above the video */
-}
-
-.cta:hover, .explore-btn:hover {
-  background-color: #e64a19; /* Slight hover effect for the button */
-}
-
-/* Additional styles for the new "Explore with Us" button */
-.explore-btn {
-  background-color: #ffd700;
-  color: #333;
-  margin-top: 10px;
+  font-size: 1rem;
+  z-index: 1; /* Keeps the button above the video */
 }
 
 /* Destinations Section */
