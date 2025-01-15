@@ -4,18 +4,16 @@ darkModeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
 });
 
-// Add dark mode styles
+// Add dark mode styles (for initial load)
 document.body.classList.add('dark-mode');
-document.body.style.backgroundColor = '#121212';
-document.body.style.color = '#f5f5f5';
 
-
-// Animation on Page Load
+// GSAP Animations for Smooth Transitions
 window.addEventListener('load', () => {
   // GSAP Animation for Hero Section Text
   gsap.from('.hero h1', { opacity: 0, y: -100, duration: 1.5 });
   gsap.from('.hero p', { opacity: 0, y: 50, duration: 1.5, delay: 0.5 });
   gsap.from('.cta', { opacity: 0, y: 100, duration: 1.5, delay: 1 });
+  gsap.from('.explore-btn', { opacity: 0, y: 100, duration: 1.5, delay: 1.3 });
 
   // GSAP Animation for Destination Cards
   const destinationCards = document.querySelectorAll('.destination-card');

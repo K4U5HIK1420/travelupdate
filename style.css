@@ -71,7 +71,9 @@ header .navbar a {
   z-index: 1; /* Keeps the paragraph above the video */
 }
 
-.cta {
+/* Updated button styling to be in front of the video */
+.cta, .explore-btn {
+  position: relative; /* Make sure buttons are positioned relative to the hero section */
   margin-top: 20px;
   padding: 12px 25px; /* Increased padding for better button visibility */
   background-color: #ff5722;
@@ -79,11 +81,18 @@ header .navbar a {
   border: none;
   cursor: pointer;
   font-size: 1.1rem; /* Slightly larger button text */
-  z-index: 1; /* Keeps the button above the video */
+  z-index: 1; /* Keeps the buttons above the video */
 }
 
-.cta:hover {
+.cta:hover, .explore-btn:hover {
   background-color: #e64a19; /* Slight hover effect for the button */
+}
+
+/* Additional styles for the new "Explore with Us" button */
+.explore-btn {
+  background-color: #ffd700;
+  color: #333;
+  margin-top: 10px;
 }
 
 /* Destinations Section */
@@ -137,11 +146,6 @@ header .navbar a {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-}
-
-.blog-post:hover {
-  transform: translateY(-10px); /* Hover effect to lift blog cards */
 }
 
 .blog-post img {
