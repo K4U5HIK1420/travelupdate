@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WanderWise</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
 </head>
+
 <body>
   <header id="header">
     <div class="logo">WanderWise</div>
@@ -19,12 +22,19 @@
     <button id="dark-mode-toggle">🌙</button>
   </header>
 
+  <!-- Hero Section with Video Background -->
   <section id="home" class="hero">
-    <h1>Explore the World <br><span>Like Never Before</span></h1>
-    <p>Find the perfect destination for your next adventure.</p>
-    <button class="cta">Get Started</button>
+    <video autoplay loop muted>
+      <source src="hero-video.mp4" type="video/mp4">
+    </video>
+    <div id="page1-content">
+      <h1>Welcome to Our Travel Website <span>Explore with Us!</span></h1>
+      <p>Find the perfect destination for your next adventure.</p>
+      <button class="cta">Get Started</button>
+    </div>
   </section>
 
+  <!-- Destinations Section -->
   <section id="destinations" class="destinations">
     <h2>Top Destinations</h2>
     <div class="destination-grid">
@@ -46,6 +56,7 @@
     </div>
   </section>
 
+  <!-- Blog Section -->
   <section id="blog" class="blog">
     <h2>Travel Stories</h2>
     <div class="blog-posts">
@@ -67,4 +78,5 @@
     <p>Made with ❤️ by Anant Kaushik</p>
   </footer>
 </body>
+
 </html>

@@ -1,17 +1,10 @@
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
-
 darkModeToggle.addEventListener('click', () => {
-  // Toggle dark mode class on the body element
+  // Toggle the 'dark-mode' class on the body element
   document.body.classList.toggle('dark-mode');
-  
-  // Optional: Change the icon based on dark mode status
-  if (document.body.classList.contains('dark-mode')) {
-    darkModeToggle.textContent = '🌞'; // Light mode icon
-  } else {
-    darkModeToggle.textContent = '🌙'; // Dark mode icon
-  }
 });
+
 
 // Animation on Page Load
 window.addEventListener('load', () => {
