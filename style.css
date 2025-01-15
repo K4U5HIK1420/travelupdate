@@ -35,25 +35,55 @@ header .navbar a {
   font-size: 1.5rem;
 }
 
+/* Hero Section with Video Background */
 .hero {
+  position: relative;
   text-align: center;
-  background: url('hero-video.mp4') no-repeat center center/cover;
+  background: #000; /* Fallback color for when the video isn't loaded */
   color: #fff;
-  padding: 100px 20px;
+  padding: 50px 20px; /* Reduced padding for smaller hero height */
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the area without stretching */
+  z-index: -1; /* Places the video behind the text */
+}
+
+.hero h1 {
+  font-size: 2.5rem; /* Adjusted font size for better scaling */
+  margin-bottom: 15px;
+  z-index: 1; /* Keeps the text above the video */
 }
 
 .hero h1 span {
   color: #ffd700;
 }
 
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  z-index: 1; /* Keeps the paragraph above the video */
+}
+
 .cta {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 25px; /* Increased padding for better button visibility */
   background-color: #ff5722;
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem; /* Slightly larger button text */
+  z-index: 1; /* Keeps the button above the video */
+}
+
+.cta:hover {
+  background-color: #e64a19; /* Slight hover effect for the button */
 }
 
 /* Destinations Section */
@@ -107,6 +137,11 @@ header .navbar a {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px); /* Hover effect to lift blog cards */
 }
 
 .blog-post img {
